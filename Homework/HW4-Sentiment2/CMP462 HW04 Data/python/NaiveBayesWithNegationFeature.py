@@ -21,7 +21,7 @@ import nltk
 from ImdbNaiveBayes import ImdbNaiveBayes
 
 punctuation_pat = '[.?]+'
-negation_pat = '(not|Not|n\'t|never)'
+negation_pat = '(not|Not|n\'t|never|Never|no|No|seldom|neither|nor)'
 
 
 class NaiveBayesWithNegationFeature:
