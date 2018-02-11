@@ -2,7 +2,7 @@
 
 #### Run
 ```
-$ python NaiveBayes.py -f ../data/imdb1
+$ python BooleanNaiveBayes.py -f ../data/imdb1
 ```
 
 #### Result of Boolean Naive Bayes

@@ -1,5 +1,5 @@
 # NLP Programming Assignment #4
-# NaiveBayes
+# BooleanNaiveBayes
 # 2012
 
 #
@@ -16,12 +16,10 @@ import sys
 import getopt
 import os
 import math
-from ImdbNaiveBayes import ImdbNaiveBayes
 from ImdbBooleanNaiveBayes import ImdbBooleanNaiveBayes
 
 
-class NaiveBayes:
-    imdb_naive_bayes = ImdbNaiveBayes()
+class BooleanNaiveBayes:
     imdb_boolean_naive_bayes = ImdbBooleanNaiveBayes()
 
     class TrainSplit:
@@ -54,7 +52,6 @@ class NaiveBayes:
         """ TODO
           'words' is a list of words to classify. Return 'pos' or 'neg' classification.
         """
-        # score_pos, score_neg = self.imdb_naive_bayes.get_score(words)
         score_pos, score_neg = self.imdb_boolean_naive_bayes.get_score(words)
         if score_pos >= score_neg:
             return 'pos'
@@ -70,7 +67,6 @@ class NaiveBayes:
         * in the NaiveBayes class.
         * Returns nothing
         """
-        # self.imdb_naive_bayes.add_words(klass, self.filterStopWords(words))
         self.imdb_boolean_naive_bayes.add_words(klass, self.filterStopWords(words))
 
     def filterStopWords(self, words):
@@ -228,7 +224,7 @@ class NaiveBayes:
 
 
 def main():
-    nb = NaiveBayes()
+    nb = BooleanNaiveBayes()
 
     # default parameters: no stop word filtering, and
     # training/testing on ../data/imdb1
@@ -244,7 +240,7 @@ def main():
     avgAccuracy = 0.0
     fold = 0
     for split in splits:
-        classifier = NaiveBayes()
+        classifier = BooleanNaiveBayes()
         accuracy = 0.0
         for example in split.train:
             words = example.words
