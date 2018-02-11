@@ -35,5 +35,5 @@ $ python NaiveBayesWithNegationFeature.py -f ../data/imdb1
 [INFO]	Fold 7 Accuracy: 1.000000
 [INFO]	Fold 8 Accuracy: 1.000000
 [INFO]	Fold 9 Accuracy: 0.995000
-[INFO]	Accuracy: 0.968000
+[INFO]	Accuracy: 0.968500
 ```
