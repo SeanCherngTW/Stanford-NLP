@@ -5,7 +5,7 @@
 $ python NaiveBayes.py -f ../data/imdb1
 ```
 
-#### Result
+#### Result of Naive Bayes
 ```
 [INFO]	Performing 10-fold cross-validation on data set:	../data/imdb1
 [INFO]	Fold 0 Accuracy: 0.760000
