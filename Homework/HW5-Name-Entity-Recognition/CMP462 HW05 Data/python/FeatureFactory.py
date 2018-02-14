@@ -9,6 +9,8 @@ from Datum import Datum
 captial_pat = '^[A-Z][a-z]+$'
 camel_pat = '^([A-Z][a-z]+)+$'
 double_pat = '^[A-Za-z]+-[A-Za-z]+$'
+person_name_pat = '^[A-Z].$'
+person_name_pat2 = '^[A-Z]\'[A-Za-z]+$'
 
 
 class FeatureFactory:
@@ -54,14 +56,6 @@ class FeatureFactory:
         else:
             return 'Others'
 
-    def wordPattern2(self, s):
-        if re.match(captial_pat, s):
-            return 'Captial'
-        elif re.match(camel_pat, s):
-            return 'Camel'
-        else:
-            return 'Others'
-
     def wordPrefix(self, s):
         # s[:3] gives the best performance
         return re.sub(r"[^a-zA-Z\.\,\!\?]", "#", s[:3])
@@ -73,7 +67,7 @@ class FeatureFactory:
     def posTag(self, s):
         return nltk.pos_tag([s])[0][1]
 
-    def isNoun(self, s):
+    def isNNP(self, s):
         return True if self.posTag(s).startswith('NNP') else False
 
     def hasDigit(self, s):
@@ -88,7 +82,7 @@ class FeatureFactory:
 
         """ Baseline Features """
         features.append("word=" + currentWord)
-        features.append("prevLabel=" + previousLabel)
+        # features.append("prevLabel=" + previousLabel)
         features.append("word=" + currentWord + ", prevLabel=" + previousLabel)
         """
         Warning: If you encounter "line search failure" error when
@@ -101,14 +95,16 @@ class FeatureFactory:
         features.append("hasDigit=" + str(self.hasDigit(currentWord)))
         features.append("hasPunc=" + str(self.hasPunctuation(currentWord)))
         features.append("len=" + str(len(currentWord)))
-        # features.append("isNoun=" + str(self.isNoun(currentWord)))
+        features.append("prefix3=" + self.wordPrefix(currentWord))
+        features.append("suffix3=" + self.wordSuffix(currentWord))
+
         wp = self.wordPattern(currentWord)
         if wp == 'Captial' or wp == 'Double':
             features.append("pattern=" + wp + ", prevLabel=" + previousLabel)
         else:
             features.append("pattern=" + wp)
-        features.append("prefix3=" + self.wordPrefix(currentWord))
-        features.append("suffix3=" + self.wordSuffix(currentWord))
+
+        # features.append("isNNP=" + str(self.isNNP(currentWord)) + ", prevLabel=" + previousLabel)
 
         return features
 
