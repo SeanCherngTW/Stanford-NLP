@@ -49,6 +49,7 @@ class FeatureFactory:
             return 'Others'
 
     def wordPrefix(self, s):
+        # s[:3] gives the best performance
         return re.sub(r"[^a-zA-Z\.\,\!\?]", "#", s[:3])
 
     def wordSuffix(self, s):
@@ -83,7 +84,7 @@ class FeatureFactory:
         """
 
         """ TODO: Add your features here """
-        features.append("isdigit=" + str(currentWord.isdigit()))
+        features.append("isdigit=" + str(self.hasDigit(currentWord)))
         features.append("isPunc=" + str(self.isPunctuation(currentWord)))
         features.append("len=" + str(len(currentWord)))
         # features.append("isNoun=" + str(self.isNoun(currentWord)))
