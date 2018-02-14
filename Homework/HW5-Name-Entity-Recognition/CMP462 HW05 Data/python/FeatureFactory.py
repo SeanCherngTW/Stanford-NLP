@@ -89,7 +89,10 @@ class FeatureFactory:
         features.append("len=" + str(len(currentWord)))
         # features.append("isNoun=" + str(self.isNoun(currentWord)))
         wp = self.wordPattern(currentWord)
-        features.append("prevLabel=" + previousLabel + ", pattern=" + wp)
+        if wp == 'Captial' or wp == 'Camel':
+            features.append("prevLabel=" + previousLabel + ", pattern=" + wp)
+        else:
+            features.append("pattern=" + wp)
         features.append("prefix3=" + self.wordPrefix(currentWord))
         features.append("suffix3=" + self.wordSuffix(currentWord))
 
