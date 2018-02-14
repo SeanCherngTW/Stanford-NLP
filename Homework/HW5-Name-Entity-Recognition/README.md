@@ -1,4 +1,4 @@
-# HW4-Sentiment2
+# HW5-Name Entity Recognition
 
 #### Run
 ```
