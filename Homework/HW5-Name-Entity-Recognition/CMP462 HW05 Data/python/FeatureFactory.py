@@ -34,6 +34,12 @@ class FeatureFactory:
                 return False
         return True
 
+    def hasPunctuation(self, s):
+        for c in s:
+            if c in string.punctuation:
+                return True
+        return False
+
     def wordPattern(self, s):
         if s.isupper():
             return 'ALLCAP'
@@ -45,6 +51,14 @@ class FeatureFactory:
             return 'Camel'
         elif re.match(double_pat, s):
             return 'Double'
+        else:
+            return 'Others'
+
+    def wordPattern2(self, s):
+        if re.match(captial_pat, s):
+            return 'Captial'
+        elif re.match(camel_pat, s):
+            return 'Camel'
         else:
             return 'Others'
 
@@ -60,7 +74,7 @@ class FeatureFactory:
         return nltk.pos_tag([s])[0][1]
 
     def isNoun(self, s):
-        return True if self.posTag(s).startswith('N') else False
+        return True if self.posTag(s).startswith('NNP') else False
 
     def hasDigit(self, s):
         for c in s:
@@ -84,8 +98,8 @@ class FeatureFactory:
         """
 
         """ TODO: Add your features here """
-        features.append("isdigit=" + str(self.hasDigit(currentWord)))
-        features.append("isPunc=" + str(self.isPunctuation(currentWord)))
+        features.append("hasDigit=" + str(self.hasDigit(currentWord)))
+        features.append("hasPunc=" + str(self.hasPunctuation(currentWord)))
         features.append("len=" + str(len(currentWord)))
         # features.append("isNoun=" + str(self.isNoun(currentWord)))
         wp = self.wordPattern(currentWord)
