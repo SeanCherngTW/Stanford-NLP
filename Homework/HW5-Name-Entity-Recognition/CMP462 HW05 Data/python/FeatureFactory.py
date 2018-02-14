@@ -52,6 +52,7 @@ class FeatureFactory:
         return re.sub(r"[^a-zA-Z\.\,\!\?]", "#", s[:3])
 
     def wordSuffix(self, s):
+        # s[-3:] gives the best performance
         return re.sub(r"[^a-zA-Z\.\,\!\?]", "#", s[-3:])
 
     def posTag(self, s):
