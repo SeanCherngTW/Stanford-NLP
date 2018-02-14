@@ -74,7 +74,7 @@ class FeatureFactory:
 
         """ Baseline Features """
         features.append("word=" + currentWord)
-        # features.append("prevLabel=" + previousLabel)
+        features.append("prevLabel=" + previousLabel)
         features.append("word=" + currentWord + ", prevLabel=" + previousLabel)
         """
         Warning: If you encounter "line search failure" error when
