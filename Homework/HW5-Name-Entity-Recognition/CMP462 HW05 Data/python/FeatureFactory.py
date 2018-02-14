@@ -89,7 +89,7 @@ class FeatureFactory:
         features.append("len=" + str(len(currentWord)))
         # features.append("isNoun=" + str(self.isNoun(currentWord)))
         wp = self.wordPattern(currentWord)
-        if wp == 'Captial' or wp == 'Camel':
+        if wp == 'Captial' or wp == 'Camel' or wp == 'Double':
             features.append("prevLabel=" + previousLabel + ", pattern=" + wp)
         else:
             features.append("pattern=" + wp)
