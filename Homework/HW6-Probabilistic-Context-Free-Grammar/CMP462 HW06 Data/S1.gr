@@ -15,10 +15,10 @@
 1	WH	WDT QA
 1	WH	WRB QA
 
-1	QA	DO/DOES NV
+1	QA	VB NV
 
-1	VP	VerbT NP
-1	VP	VerbT Adj
+1	VP	VBZ NP
+1	VP	VBZ JJ
 1	VP	VB
 1	VP	VB VBP
 1	VP	VBZ
@@ -26,20 +26,17 @@
 1	VP	NP
 
 1	VBP	NP
-1	VBP	Adj
+1	VBP	JJ
 1	VBP	NP VP
 
-1	DO/DOES	Do
-1	DO/DOES	Does
-
-1	NP	Det Nbar
-1	NP	Num Nbar
-1	NP	Prep Det NNS
+1	NP	DT Nbar
+1	NP	NUM Nbar
+1	NP	IN DT NNS
 1	NP	Nbar
-1	NP	Proper
-1	NP	Ving To Nbar
+1	NP	NNP
+1	NP	VBG TO Nbar
 
-1	Nbar	Noun
+1	Nbar	NN
 1	Nbar	NNP
 1	Nbar	Nbar PP
 1	Nbar	Nbar NP
@@ -47,4 +44,4 @@
 1	Nbar	PRP
 1	Nbar	NNP
 
-1	PP	Prep NP
+1	PP	IN NP

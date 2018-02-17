@@ -11,74 +11,74 @@
 
 # Singular and mass nouns.  Notice that only the
 # ones that start with consonants get our Noun tag.
-1	Noun	castle
-1	Noun	king
-1	Noun	defeater
-1	Noun	sovereign
-1	Noun	servant
-1	Noun	corner
-1	Noun	land
-1	Noun	quest
-1	Noun	chalice
-1	Noun	master
-1	Noun	horse
-1	Noun	fruit
-1	Noun	swallow
-1	Noun	sun
-1	Noun	winter
-1	Noun	coconut
-1	Noun	pound
-1	Noun	husk
-1	Noun	home
-1	Noun	weight
-1	Noun	story
+1	NN	castle
+1	NN	king
+1	NN	defeater
+1	NN	sovereign
+1	NN	servant
+1	NN	corner
+1	NN	land
+1	NN	quest
+1	NN	chalice
+1	NN	master
+1	NN	horse
+1	NN	fruit
+1	NN	swallow
+1	NN	sun
+1	NN	winter
+1	NN	coconut
+1	NN	pound
+1	NN	husk
+1	NN	home
+1	NN	weight
+1	NN	story
 
 # Determiners.
-1	Det	a
-1	Det	another
-1	Det	any
-1	Det	each
-1	Det	every
-1	Det	no
-1	Det	that
-1	Det	the
-1	Det	this
+1	DT	a
+1	DT	another
+1	DT	any
+1	DT	each
+1	DT	every
+1	DT	no
+1	DT	that
+1	DT	the
+1	DT	this
 
 # Prepositions.
-1	Prep	above
-1	Prep	across
-1	Prep	at
-1	Prep	below
-1	Prep	by
-1	Prep	for
-1	Prep	from
-1	Prep	into
-1	Prep	near
-1	Prep	of
-1	Prep	on
-1	Prep	over
-1	Prep	through
-1	Prep	with
+1	IN	above
+1	IN	across
+1	IN	at
+1	IN	below
+1	IN	by
+1	IN	for
+1	IN	from
+1	IN	into
+1	IN	near
+1	IN	of
+1	IN	on
+1	IN	over
+1	IN	through
+1	IN	with
 
 # Proper nouns.  Note that our Proper tag is just for people.
-1	Proper	Arthur
-1	Proper	Guinevere
-1	Proper	Sir Lancelot
-1	Proper	Sir Bedevere
-1	Proper	Zoot
-1	Proper	Dingo
-1	Proper	Patsy
-1	Proper	Uther Pendragon
+1	NNP	Arthur
+1	NNP	Guinevere
+1	NNP	Sir Lancelot
+1	NNP	Sir Bedevere
+1	NNP	Zoot
+1	NNP	Dingo
+1	NNP	Patsy
+1	NNP	Uther Pendragon
 
 # Verbs (third person singular present).
-# Note that only transitive verbs get our VerbT tag,
+# Note that only transitive verbs get our VBZ tag,
 # and some of those could also function as intransitives!
-1	VerbT	has
-1	VerbT	covers
-1	VerbT	is
-1	VerbT	drinks
-1	VerbT	carries
-1	VerbT	rides
+1	VBZ	has
+1	VBZ	covers
+1	VBZ	is
+1	VBZ	drinks
+1	VBZ	carries
+1	VBZ	rides
 
 # End-of-sentence.
 1	EOS	!
@@ -86,11 +86,11 @@
 1	EOS	?
 
 # Pauses.
-1	Pause	,
-1	Pause	...
-1	Pause	--
-1	Pause	;
-1	Pause	:
+1	PSE	,
+1	PSE	...
+1	PSE	--
+1	PSE	;
+1	PSE	:
 
 # Coordinating conjunctions.
 1	CC	and
@@ -102,15 +102,15 @@
 1	CC	so
 
 # Numbers.
-1	Num	eight
-1	Num	five
-1	Num	one
-1	Num	5.5
-1	Num	sixty
-1	Num	5,000
+1	NUM	eight
+1	NUM	five
+1	NUM	one
+1	NUM	5.5
+1	NUM	sixty
+1	NUM	5,000
 
 # Expletive.
-1	Exp	there
+1	EXP	there
 
 # Subordinating conjunctions.
 1	IN	that
@@ -133,25 +133,25 @@
 
 
 # Adjectives.
-1	Adj	bloody
-1	Adj	weary
-1	Adj	unable
-1	Adj	trusty
-1	Adj	further
-1	Adj	sacred
-1	Adj	tropical
-1	Adj	indigenous
-1	Adj	temperate
-1	Adj	hot
-1	Adj	lucky
-1	Adj	simple
-1	Adj	tiny
-1	Adj	hard
-1	Adj	sensational
-1	Adj	comparable
-1	Adj	angolian
-1	Adj	yellow
-1	Adj	plodding
+1	JJ	bloody
+1	JJ	weary
+1	JJ	unable
+1	JJ	trusty
+1	JJ	further
+1	JJ	sacred
+1	JJ	tropical
+1	JJ	indigenous
+1	JJ	temperate
+1	JJ	hot
+1	JJ	lucky
+1	JJ	simple
+1	JJ	tiny
+1	JJ	hard
+1	JJ	sensational
+1	JJ	comparable
+1	JJ	angolian
+1	JJ	yellow
+1	JJ	plodding
 
 # Comparative adjectives.
 1	JJR	bloodier
@@ -184,7 +184,6 @@
 1	NNS	nights
 
 # More proper nouns, not people.
-
 1	NNP	Camelot
 1	NNP	England
 1	NNP	Holy Grail
@@ -221,14 +220,14 @@
 1	RB	unfortunately
 
 # 'do'/'does'
-1	Do	do
-1	Does	does
+1	VB	do
+1	VBZ	does
 
 # 'to'
-1	To	to
+1	TO	to
 
 # 'not'
-1	Not	not
+1	NOT	not
 
 # Verbs (base form).
 1	VB	have
@@ -258,17 +257,17 @@
 1	VBD	knew
 
 # Verbs (present participles).
-1	Ving	having
-1	Ving	speaking
-1	Ving	covering
-1	Ving	being
-1	Ving	riding
-1	Ving	drinking
-1	Ving	growing
-1	Ving	carrying
-1	Ving	suggesting
-1	Ving	migrating
-1	Ving	knowing
+1	VBG	having
+1	VBG	speaking
+1	VBG	covering
+1	VBG	being
+1	VBG	riding
+1	VBG	drinking
+1	VBG	growing
+1	VBG	carrying
+1	VBG	suggesting
+1	VBG	migrating
+1	VBG	knowing
 
 # Verbs (past participle).
 1	VBN	had
@@ -292,17 +291,17 @@
 1	VBZ	knows
 
 # Verbs (present, plural, third person).
-1	VBZ	have
-1	VBZ	speak
-1	VBZ	cover
-1	VBZ	are
-1	VBZ	ride
-1	VBZ	drink
-1	VBZ	grow
-1	VBZ	carry
-1	VBZ	suggest
-1	VBZ	migrate
-1	VBZ	know
+1	VB	have
+1	VB	speak
+1	VB	cover
+1	VB	are
+1	VB	ride
+1	VB	drink
+1	VB	grow
+1	VB	carry
+1	VB	suggest
+1	VB	migrate
+1	VB	know
 
 # Wh-determiners.
 1	WDT	that
@@ -325,4 +324,4 @@
 
 
 # Possessive marker.
-1	Marker	's
+1	MRK	's

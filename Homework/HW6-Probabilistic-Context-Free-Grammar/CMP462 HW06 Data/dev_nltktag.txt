@@ -1,0 +1,323 @@
+Arthur is the king .
+(Arthur, NNP)
+(is, VBZ)
+(the, DT)
+(king, NN)
+(., .)
+
+
+Arthur rides the horse near the castle .
+(Arthur, NNP)
+(rides, VBZ)
+(the, DT)
+(horse, NN)
+(near, IN)
+(the, DT)
+(castle, NN)
+(., .)
+
+
+riding to Camelot is hard .
+(riding, VBG)
+(to, TO)
+(Camelot, NNP)
+(is, VBZ)
+(hard, JJ)
+(., .)
+
+
+do coconuts speak ?
+(do, VB)
+(coconuts, NNS)
+(speak, VB)
+(?, .)
+
+
+what does Arthur ride ?
+(what, WP)
+(does, VBZ)
+(Arthur, NNP)
+(ride, VB)
+(?, .)
+
+
+who does Arthur suggest she carry ?
+(who, WP)
+(does, VBZ)
+(Arthur, NNP)
+(suggest, VB)
+(she, PRP)
+(carry, VB)
+(?, .)
+
+
+why does England have a king ?
+(why, WRB)
+(does, VBZ)
+(England, NNP)
+(have, VB)
+(a, DT)
+(king, NN)
+(?, .)
+
+
+are they suggesting Arthur ride to Camelot ?
+(are, VBP)
+(they, PRP)
+(suggesting, VBG)
+(Arthur, NNP)
+(ride, NN)
+(to, TO)
+(Camelot, NNP)
+(?, .)
+
+
+five strangers are at the Round Table .
+(five, CD)
+(strangers, NNS)
+(are, VBP)
+(at, IN)
+(the, DT)
+(Round, NNP)
+(Table, NNP)
+(., .)
+
+
+Guinevere might have known .
+(Guinevere, RB)
+(might, MD)
+(have, VB)
+(known, VBN)
+(., .)
+
+
+Guinevere should be riding with Patsy .
+(Guinevere, NNP)
+(should, MD)
+(be, VB)
+(riding, VBG)
+(with, IN)
+(Patsy, NNP)
+(., .)
+
+
+it is Sir Lancelot who knows Zoot !
+(it, PRP)
+(is, VBZ)
+(Sir, NNP)
+(Lancelot, NNP)
+(who, WP)
+(knows, VBZ)
+(Zoot, NN)
+(!, .)
+
+
+either Arthur knows or Patsy does .
+(either, DT)
+(Arthur, NNP)
+(knows, VBZ)
+(or, CC)
+(Patsy, NNP)
+(does, VBZ)
+(., .)
+
+
+neither Sir Lancelot nor Guinevere will speak of it .
+(neither, DT)
+(Sir, NNP)
+(Lancelot, NNP)
+(nor, CC)
+(Guinevere, NNP)
+(will, MD)
+(speak, VB)
+(of, IN)
+(it, PRP)
+(., .)
+
+
+the Holy Grail was covered by a yellow fruit .
+(the, DT)
+(Holy, NNP)
+(Grail, NNP)
+(was, VBD)
+(covered, VBN)
+(by, IN)
+(a, DT)
+(yellow, JJ)
+(fruit, NN)
+(., .)
+
+
+Zoot might have been carried by a swallow .
+(Zoot, NN)
+(might, MD)
+(have, VB)
+(been, VBN)
+(carried, VBN)
+(by, IN)
+(a, DT)
+(swallow, NN)
+(., .)
+
+
+Arthur rode to Camelot and drank from his chalice .
+(Arthur, NNP)
+(rode, NN)
+(to, TO)
+(Camelot, NNP)
+(and, CC)
+(drank, NN)
+(from, IN)
+(his, PRP$)
+(chalice, NN)
+(., .)
+
+
+they migrate precisely because they know they will grow .
+(they, PRP)
+(migrate, VBP)
+(precisely, RB)
+(because, IN)
+(they, PRP)
+(know, VBP)
+(they, PRP)
+(will, MD)
+(grow, VB)
+(., .)
+
+
+do not speak !
+(do, VB)
+(not, RB)
+(speak, VB)
+(!, .)
+
+
+Arthur will have been riding for eight nights .
+(Arthur, NNP)
+(will, MD)
+(have, VB)
+(been, VBN)
+(riding, VBG)
+(for, IN)
+(eight, CD)
+(nights, NNS)
+(., .)
+
+
+Arthur , sixty inches , is a tiny king .
+(Arthur, NNP)
+(,, ,)
+(sixty, NN)
+(inches, NNS)
+(,, ,)
+(is, VBZ)
+(a, DT)
+(tiny, JJ)
+(king, NN)
+(., .)
+
+
+Arthur knows Patsy , the trusty servant .
+(Arthur, NNP)
+(knows, VBZ)
+(Patsy, NNP)
+(,, ,)
+(the, DT)
+(trusty, NN)
+(servant, NN)
+(., .)
+
+
+Arthur and Guinevere migrate frequently .
+(Arthur, NNP)
+(and, CC)
+(Guinevere, NNP)
+(migrate, VBP)
+(frequently, RB)
+(., .)
+
+
+he knows what they are covering with that story .
+(he, PRP)
+(knows, VBZ)
+(what, WP)
+(they, PRP)
+(are, VBP)
+(covering, VBG)
+(with, IN)
+(that, DT)
+(story, NN)
+(., .)
+
+
+Arthur suggested that the castle be carried .
+(Arthur, NNP)
+(suggested, VBD)
+(that, IN)
+(the, DT)
+(castle, NN)
+(be, VB)
+(carried, VBN)
+(., .)
+
+
+the king drank to the castle that was his home .
+(the, DT)
+(king, NN)
+(drank, NN)
+(to, TO)
+(the, DT)
+(castle, NN)
+(that, WDT)
+(was, VBD)
+(his, PRP$)
+(home, NN)
+(., .)
+
+
+when the king drinks , Patsy drinks .
+(when, WRB)
+(the, DT)
+(king, NN)
+(drinks, NNS)
+(,, ,)
+(Patsy, NNP)
+(drinks, NNS)
+(., .)
+
+
+Arthur knows what Patsy drinks .
+(Arthur, NNP)
+(knows, VBZ)
+(what, WP)
+(Patsy, NNP)
+(drinks, NNS)
+(., .)
+
+
+speak not !
+(speak, NN)
+(not, RB)
+(!, .)
+
+
+Arthur knows the Holy Grail .
+(Arthur, NNP)
+(knows, VBZ)
+(the, DT)
+(Holy, NNP)
+(Grail, NNP)
+(., .)
+
+
+Arthur should be riding with Zoot .
+(Arthur, NNP)
+(should, MD)
+(be, VB)
+(riding, VBG)
+(with, IN)
+(Zoot, NNP)
+(., .)
+
+
