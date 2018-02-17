@@ -1,0 +1,72 @@
+Arthur is the king .
+[Proper VerbT Det Noun]
+
+Arthur rides the horse near the castle .
+[Proper VerbT Det Noun Prep Det Noun]
+
+riding to Camelot is hard .
+[V(-ing) 'to' More-proper-nouns VerbT Adj]
+
+do coconuts speak ?
+['do' Plural-nouns V(base-form)]
+
+what does Arthur ride ?
+[wh-determiners 'do' Proper-nouns V(base-form)]
+
+who does Arthur suggest she carry ?
+[wh-pronouns 'do' Proper-nouns V(base-form) personal-pronouns V(base-form)]
+
+why does England have a king ?
+[wh-adv 'do' Noun V(base-form) Det Noun]
+
+are they suggesting Arthur ride to Camelot ?
+[V(Plural) personal-pronouns V(-ing) Noun V(base-form) 'to' Noun]
+
+five strangers are at the Round Table .
+[Num P-Nouns V(Plural) Prep Det Proper-nouns]
+
+Guinevere might have known .
+[Proper Modals V(base-form) V(PP)]
+
+Guinevere should be riding with Patsy .
+
+it is Sir Lancelot who knows Zoot !
+
+either Arthur knows or Patsy does .
+
+neither Sir Lancelot nor Guinevere will speak of it .
+
+the Holy Grail was covered by a yellow fruit .
+
+Zoot might have been carried by a swallow .
+
+Arthur rode to Camelot and drank from his chalice .
+
+they migrate precisely because they know they will grow .
+
+do not speak !
+
+Arthur will have been riding for eight nights .
+
+Arthur , sixty inches , is a tiny king .
+
+Arthur knows Patsy , the trusty servant .
+
+Arthur and Guinevere migrate frequently .
+
+he knows what they are covering with that story .
+
+Arthur suggested that the castle be carried .
+
+the king drank to the castle that was his home .
+
+when the king drinks , Patsy drinks .
+
+Arthur knows what Patsy drinks .
+
+speak not !
+
+Arthur knows the Holy Grail .
+
+Arthur should be riding with Zoot .
+[Proper Modals(Misc) V(PP)(Misc) V(-ing)(Misc) Prep Proper]
