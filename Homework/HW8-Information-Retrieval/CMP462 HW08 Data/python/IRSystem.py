@@ -142,22 +142,32 @@ class IRSystem:
         #       word-document pair, but rather just for those pairs where a
         #       word actually occurs in the document.
         print "Calculating tf-idf..."
-        self.tfidf = {}
-        for word in self.vocab:
-            for d in range(len(self.docs)):
+        N = len(self.docs)
+        self.tfidf = {}  # Calculate tfidf for all word in all documents
+        for word in self.vocab:  # word is a distinct word
+            for docID in range(len(self.docs)):  # docID is the index of the document
                 if word not in self.tfidf:
                     self.tfidf[word] = {}
-                self.tfidf[word][d] = 0.0
+                if docID in self.inv_index[word]:
+                    log_tf = 1 + math.log(self.inv_index[word][docID], 10)
+                    log_idf = math.log(float(N) / len(self.inv_index[word]), 10)
+                    self.tfidf[word][docID] = log_tf * log_idf
+                else:
+                    self.tfidf[word][docID] = 0.0
 
+        self.tfidf_doc_length = {}
+        for word in self.vocab:
+            for _word, tfidf in self.tfidf[word].items():
+                self.tfidf_doc_length[_word] = self.tfidf_doc_length.get(_word, 0.0) + tfidf ** 2
+        self.tfidf_doc_length = dict((d, math.sqrt(s)) for d, s in self.tfidf_doc_length.items())
         # ------------------------------------------------------------------
 
     def get_tfidf(self, word, document):
         # ------------------------------------------------------------------
         # TODO: Return the tf-idf weigthing for the given word (string) and
         #       document index.
-        tfidf = 0.0
         # ------------------------------------------------------------------
-        return tfidf
+        return self.tfidf[word][document]
 
     def get_tfidf_unstemmed(self, word, document):
         """
@@ -178,12 +188,22 @@ class IRSystem:
         #       Granted this may not be a linked list as in a proper
         #       implementation.
         #       Some helpful instance variables:
-        #         * self.docs = List of documents
+        #         * self.docs = List of documents (index, content)
         #         * self.titles = List of titles
 
         inv_index = {}
         for word in self.vocab:
-            inv_index[word] = []
+            inv_index[word] = {}
+
+        # docID is document ID and content is all words of the document
+        for docID, content in enumerate(self.docs):
+            for word in content:
+                if docID in inv_index[word]:
+                    # The word occurs more than one times in the document
+                    inv_index[word][docID] += 1
+                else:
+                    # The word occurs the first time in the document
+                    inv_index[word][docID] = 1
 
         self.inv_index = inv_index
 
@@ -196,7 +216,10 @@ class IRSystem:
         """
         # ------------------------------------------------------------------
         # TODO: return the list of postings for a word.
-        posting = []
+        if word in self.inv_index:
+            posting = self.inv_index[word]
+        else:
+            posting = []
 
         return posting
         # ------------------------------------------------------------------
@@ -221,10 +244,14 @@ class IRSystem:
         # TODO: Implement Boolean retrieval. You will want to use your
         #       inverted index that you created in index().
         # Right now this just returns all the possible documents!
-        docs = []
-        for d in range(len(self.docs)):
-            docs.append(d)
+        s = set(range(60))  # For AND operation
+        for word in query:
+            if word in self.inv_index:
+                s = s & set(self.inv_index[word])
+            else:
+                return []
 
+        return list(s)
         # ------------------------------------------------------------------
 
         return sorted(docs)   # sorted doesn't actually matter
@@ -241,15 +268,41 @@ class IRSystem:
 
         # Right now, this code simply gets the score by taking the Jaccard
         # similarity between the query and every document.
-        words_in_query = set()
+        # words_in_query = set()
+        # for word in query:
+        #     words_in_query.add(word)
+
+        # for d, doc in enumerate(self.docs):
+        #     words_in_doc = set(doc)
+        #     scores[d] = len(words_in_query.intersection(words_in_doc)) \
+        #         / float(len(words_in_query.union(words_in_doc)))
+
+        query_tf = {}
+        query_tfidf = []
         for word in query:
-            words_in_query.add(word)
+            if word in query_tf:
+                query_tf[word] += 1
+            else:
+                query_tf[word] = 1
 
-        for d, doc in enumerate(self.docs):
-            words_in_doc = set(doc)
-            scores[d] = len(words_in_query.intersection(words_in_doc)) \
-                / float(len(words_in_query.union(words_in_doc)))
+        query_list = query_tf.keys()
 
+        for word in query_list:
+            query_tfidf.append(1 + math.log(query_tf[word], 10))
+
+        for docID in range(len(self.docs)):
+            document_tfidf = []
+            doc_length = self.tfidf_doc_length[docID]
+
+            for word in query_list:
+                document_tfidf.append(self.get_tfidf(word, docID))
+
+            cosine_similarity = 0.0
+
+            for i in range(len(query_list)):
+                cosine_similarity += query_tfidf[i] * document_tfidf[i] / doc_length
+
+            scores[docID] = cosine_similarity
         # ------------------------------------------------------------------
 
         ranking = [idx for idx, sim in sorted(enumerate(scores),
@@ -258,6 +311,17 @@ class IRSystem:
         for i in range(10):
             results.append((ranking[i], scores[ranking[i]]))
         return results
+
+    def get_unit_vector(self, vector):
+        length = 0.0
+        for v in vector:
+            length += v**2
+        if length == 0:
+            return 0
+        unit_vector = 1 / length
+        for v in vector:
+            unit_vector *= v
+        return unit_vector
 
     def process_query(self, query_str):
         """
