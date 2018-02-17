@@ -1,37 +1,50 @@
 # The start symbol is START.
 
 # These two rules are required; choose their weights carefully!
-90	START	S1
-10	START	S2
+80	START	S1
+20	START	S2
 
 # This is a very, very, very simple grammar to get you started.
 
-1	S1	NP VP .
-1	S1	DO/DOES NP VP ?
-1	S1	WDT DO/DOES NP VP ?
+1	S1	NV .
+1	S1	QA ?
+1	S1	WH ?
+
+1	NV	NP VP
+
+1	WH	WDT QA
+1	WH	WRB QA
+
+1	QA	DO/DOES NV
 
 1	VP	VerbT NP
 1	VP	VerbT Adj
-1	VP	VBP
+1	VP	VB
+1	VP	VB VBP
+1	VP	VBZ
+1	VP	VBZ	VBP
+1	VP	NP
 
-1	VBP	VB
-1	VBP	VB Adj
-1	VBP	VB NP VP
 1	VBP	NP
+1	VBP	Adj
+1	VBP	NP VP
 
 1	DO/DOES	Do
 1	DO/DOES	Does
 
-20	NP	Det Nbar
+1	NP	Det Nbar
+1	NP	Num Nbar
+1	NP	Prep Det NNS
+1	NP	Nbar
 1	NP	Proper
-1	NP	Ving VNbar
-1	NP	NNS
-1	NP	PRP
+1	NP	Ving To Nbar
 
-1	VNbar	To Nbar
-
-20	Nbar	Noun
+1	Nbar	Noun
 1	Nbar	NNP
 1	Nbar	Nbar PP
+1	Nbar	Nbar NP
+1	Nbar	NNS
+1	Nbar	PRP
+1	Nbar	NNP
 
 1	PP	Prep NP

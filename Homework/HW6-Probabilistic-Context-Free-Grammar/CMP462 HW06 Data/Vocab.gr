@@ -81,55 +81,55 @@
 1	VerbT	rides
 
 # End-of-sentence.
-1	Misc	!
-1	Misc	.
-1	Misc	?
+1	EOS	!
+1	EOS	.
+1	EOS	?
 
 # Pauses.
-1	Misc	,
-1	Misc	...
-1	Misc	--
-1	Misc	;
-1	Misc	:
+1	Pause	,
+1	Pause	...
+1	Pause	--
+1	Pause	;
+1	Pause	:
 
 # Coordinating conjunctions.
-1	Misc	and
-1	Misc	but
-1	Misc	or
-1	Misc	either
-1	Misc	nor
-1	Misc	neither
-1	Misc	so
+1	CC	and
+1	CC	but
+1	CC	or
+1	CC	either
+1	CC	nor
+1	CC	neither
+1	CC	so
 
 # Numbers.
-1	Misc	eight
-1	Misc	five
-1	Misc	one
-1	Misc	5.5
-1	Misc	sixty
-1	Misc	5,000
+1	Num	eight
+1	Num	five
+1	Num	one
+1	Num	5.5
+1	Num	sixty
+1	Num	5,000
 
 # Expletive.
-1	Misc	there
+1	Exp	there
 
 # Subordinating conjunctions.
-1	Misc	that
-1	Misc	so
-1	Misc	while
-1	Misc	because
-1	Misc	if
+1	IN	that
+1	IN	so
+1	IN	while
+1	IN	because
+1	IN	if
 
 # Modals.
-1	Misc	can
-1	Misc	could
-1	Misc	may
-1	Misc	might
-1	Misc	must
-1	Misc	ought
-1	Misc	shall
-1	Misc	should
-1	Misc	will
-1	Misc	would
+1	MD	can
+1	MD	could
+1	MD	may
+1	MD	might
+1	MD	must
+1	MD	ought
+1	MD	shall
+1	MD	should
+1	MD	will
+1	MD	would
 
 
 # Adjectives.
@@ -154,22 +154,22 @@
 1	Adj	plodding
 
 # Comparative adjectives.
-1	Misc	bloodier
-1	Misc	wearier
-1	Misc	trustier
-1	Misc	hotter
-1	Misc	simpler
-1	Misc	tinier
-1	Misc	harder
+1	JJR	bloodier
+1	JJR	wearier
+1	JJR	trustier
+1	JJR	hotter
+1	JJR	simpler
+1	JJR	tinier
+1	JJR	harder
 
 # Superlative adjectives.
-1	Misc	bloodiest
-1	Misc	weariest
-1	Misc	trustiest
-1	Misc	hottest
-1	Misc	simplest
-1	Misc	tiniest
-1	Misc	hardest
+1	JJS	bloodiest
+1	JJS	weariest
+1	JJS	trustiest
+1	JJS	hottest
+1	JJS	simplest
+1	JJS	tiniest
+1	JJS	hardest
 
 # Plural nouns.
 1	NNS	coconuts
@@ -191,8 +191,8 @@
 1	NNP	Round Table
 
 # Plural proper nouns.
-1	Misc	Britons
-1	Misc	Saxons
+1	NNPS	Britons
+1	NNPS	Saxons
 
 # Personal pronouns.
 1	PRP	he
@@ -204,22 +204,21 @@
 1	PRP	them
 1	PRP	they
 
-
 # Possessive personal pronouns
-1	Misc	her
-1	Misc	his
-1	Misc	its
-1	Misc	their
+1	PRP$	her
+1	PRP$	his
+1	PRP$	its
+1	PRP$	their
 
 # Adverbs.
-1	Misc	again
-1	Misc	already
-1	Misc	currently
-1	Misc	frequently
-1	Misc	precisely
-1	Misc	south
-1	Misc	successfully
-1	Misc	unfortunately
+1	RB	again
+1	RB	already
+1	RB	currently
+1	RB	frequently
+1	RB	precisely
+1	RB	south
+1	RB	successfully
+1	RB	unfortunately
 
 # 'do'/'does'
 1	Do	do
@@ -229,7 +228,7 @@
 1	To	to
 
 # 'not'
-1	Misc	not
+1	Not	not
 
 # Verbs (base form).
 1	VB	have
@@ -245,18 +244,18 @@
 1	VB	know
 
 # Verbs (past tense).
-1	Misc	had
-1	Misc	spoke
-1	Misc	covered
-1	Misc	was
-1	Misc	were
-1	Misc	rode
-1	Misc	drank
-1	Misc	grew
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	knew
+1	VBD	had
+1	VBD	spoke
+1	VBD	covered
+1	VBD	was
+1	VBD	were
+1	VBD	rode
+1	VBD	drank
+1	VBD	grew
+1	VBD	carried
+1	VBD	suggested
+1	VBD	migrated
+1	VBD	knew
 
 # Verbs (present participles).
 1	Ving	having
@@ -272,25 +271,25 @@
 1	Ving	knowing
 
 # Verbs (past participle).
-1	Misc	had
-1	Misc	spoken
-1	Misc	covered
-1	Misc	been
-1	Misc	ridden
-1	Misc	drunk
-1	Misc	grown
-1	Misc	carried
-1	Misc	suggested
-1	Misc	migrated
-1	Misc	known
+1	VBN	had
+1	VBN	spoken
+1	VBN	covered
+1	VBN	been
+1	VBN	ridden
+1	VBN	drunk
+1	VBN	grown
+1	VBN	carried
+1	VBN	suggested
+1	VBN	migrated
+1	VBN	known
 
 # More third person singular verbs.
-1	Misc	speaks
-1	Misc	grows
-1	Misc	goes
-1	Misc	migrates
-1	Misc	suggests
-1	Misc	knows
+1	VBZ	speaks
+1	VBZ	grows
+1	VBZ	goes
+1	VBZ	migrates
+1	VBZ	suggests
+1	VBZ	knows
 
 # Verbs (present, plural, third person).
 1	VBZ	have
@@ -319,11 +318,11 @@
 1	WP$	whose
 
 # Wh-adverbs
-1	Misc	how
-1	Misc	when
-1	Misc	where
-1	Misc	why
+1	WRB	how
+1	WRB	when
+1	WRB	where
+1	WRB	why
 
 
 # Possessive marker.
-1	Misc	's
+1	Marker	's
